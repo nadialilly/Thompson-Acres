@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <title>Thompson Acres Camp information page</title>
+
+        <style>
+          #gallery {
+                line-height:0;
+                
+                column-count:5;
+                column-gap:5px;
+              } 
+
+            #gallery img {
+              width: 100% !important;
+              height: auto !important;
+              margin-bottom: 5px;
+              filter: grayscale(100%);
+            }
+
+            #gallery img:hover {
+              filter: none;
+
+            }
+
+            body {
+              background-color: black;
+            }
+
+            img:hover {
+              transform: scale(1.5);
+              position: relative;
+              z-index: 1;
+            }
+
+            .farm .craft .animal {
+              display: block;
+            }
+            
+            </style>
+            
+      
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+          <a class="navbar-brand" href="#">
+            <img src="img\tree icon.png" width="30" height="30" alt="picture of a tree icon">
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="thompson.html">Home <span class="sr-only">(current)</span></a>
+                  </li>
+                  
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#">Gallery</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="thcontact.html">Contact Us</a>
+                  </li>
+                </ul>  
+            </div>  
+        </nav>
+
+       <div class="container">
+
+          <div class="row mt-5">
+              <div class="col d-flex justify-content-center text-white">
+                  <h1>Thompson Acres Gallery</h1>
+              </div>
+          </div>
+
+          <div class="row mt-5 text-center mb-5">
+              <div class="col">     
+                <a role="button" class="mr-5 d-1" id="linkC">CRAFTS</a>
+              </div>
+              <div class="col">
+                <a role="button" Class="mr-5" id="linkF">THE FARM GROUNDS</a>
+              </div>
+              <div class="col">
+                <a role="button" id="linkA">ANIMALS</a>
+              </div>
+        
+          </div>
+          
+          <div id="gallery" class="zoom">
+            <img src="img\halloween.ghost.jpg" class="craft">
+            <img src="img\pig.taking.bath.jpg" class="animals"> 
+            <img src="img\making.dried,apple.heads.jpg" class="craft">
+            <img src="img\hobbitHouse.jpg" class="grounds">
+            <img src="img\dog.dressed.up.jpg" class="animals">
+            <img src="img\carvingPumpkins.jpg" class="craft">
+            <img src="img\dyingAlpacas.jpg" class="animals">
+            <img src="img\gingerbread.jpg" class="craft">
+            <img src="img\marshChicken.jpg" class="animals">
+            <img src="img\possum.jpg" class="animals"> 
+            <img src="img\turkeyLove.jpg" class="animals">
+            <img src="img\birdhouse.jpg" class="craft">
+            <img src="img\snake.jpg" class="animals">
+            <img src="img\shed.jpg" class="grounds">
+            <img src="img\simoneChicken.jpg" class="animals">
+            <img src="img\house.jpg" class="grounds">
+          </div>
+
+        
+         
+
+
+
+
+
+
+        </div>
+
+        <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+        <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+        <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+        <script>
+        const showCraftPics = document.querySelector("#linkC");
+        const showFarmPics = document.querySelector("#linkF");
+        const showAnimalPics = document.querySelector("#linkA");
+        showCraftPics.addEventListener("click", showCraft);
+        showFarmPics.addEventListener("click", showFarm);
+        showAnimalPics.addEventListener("click", showAnimal);
+        
+        const allCraftPics = document.querySelectorAll(".craft");
+        const allFarmPics = document.querySelectorAll(".farm");
+        const allAnimalPics = document.querySelectorAll(".animal");
+        
+        
+        function showCraft(){
+          if (allFarmPics.style.display === "block"){
+            allFarmPics.style.display = "none";
+          }
+          else{
+            allFarmPics.style.display = "block";
+          }
+        };
+        </script>
+    
+        
+    </body>
+
+</html>
